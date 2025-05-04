@@ -275,9 +275,9 @@ export default function App() {
             Experiência
           </h4>
           <h2 className="text-3xl font-extrabold mb-8">
-            Minha experiência de <span className="text-[#1387f1]">trabalho</span>
+            Minha experiência profissional como <span className="text-[#1387f1]">Desenvolvedor</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 gap-8">
             {[1].map((i) => (
               <div
                 key={i}
@@ -293,8 +293,59 @@ export default function App() {
                   </span>
                 </div>
                 <div className="text-[#dbd6d3] text-sm pb-1">
-                Criação de uma plataforma que gera e comercializa eBooks personalizados com base em formulários e IA, incluindo sistema de afiliados, cadastro de usuários e loja online. Estruturei todo o back-end, front-end e banco de dados, além de implementar automação com Selenium, controle de fila e suporte a múltiplos idiomas. 
+                Desenvolvimento de uma plataforma inovadora para geração e comercialização de eBooks personalizados com base em formulários interativos preenchidos por profissionais. O sistema utiliza Inteligência Artificial para gerar conteúdo único e personalizado, oferecendo uma experiência de compra e venda automatizada. A plataforma inclui funcionalidades avançadas, como sistema de afiliados, cadastro de usuários, loja online, e suporte a múltiplos idiomas.
                 </div>
+
+                {/* Principais Responsabilidades */}
+                <div className="mt-4">
+                  <h3 className="text-[#1387f1] font-semibold text-lg">Principais Responsabilidades:</h3>
+                  <ul className="list-disc pl-5 text-[#dbd6d3] text-sm">
+                    <div className="mt-2"></div>
+                      <li><strong>Desenvolvimento Full Stack:</strong>
+
+                      <ul className="list-inside list-decimal">
+                        <div className="mt-2"></div>
+                          <li><strong>Back-end:</strong> Estruturei a lógica do servidor usando Python e Flask, criando APIs robustas para gerenciar a interação entre os dados dos usuários, a geração de eBooks e o processamento de vendas. Implementei integração com o banco de dados SQLite3, modelando as tabelas para gerenciar dados de usuários, respostas, eBooks e transações de vendas. Além disso, configurei o processo de cadastro automatizado de produtos na plataforma de vendas, integrando com o sistema de e-commerce, fiz integração de IAs, processamento de filas e envio de emails automatizados.</li>
+                        
+                        <div className="mt-2"></div>
+                          <li><strong>Front-end:</strong> Estruturei junto com outro Desenvolvedor interfaces responsivas com HTML, CSS e JavaScript, com foco na experiência do usuário, otimizando a navegação para personalização dos eBooks e melhorando a jornada de compra.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Resultados e Impacto */}
+                <div className="mt-4" >
+                  <h3 className="text-[#1387f1] font-semibold text-lg">Resultados e Impacto:</h3>
+                  <ul className="list-disc pl-5 text-[#dbd6d3] text-sm">
+                    <div className="mt-2"></div>
+                    <li>Otimizei a criação e distribuição de eBooks, economizando tempo dos usuários e oferecendo um produto altamente personalizável e automatizado.</li>
+                    <div className="mt-2"></div>
+                    <li>A automação com Selenium melhorou a eficiência da geração de eBooks, reduzindo a carga de trabalho manual e aumentando a escalabilidade da plataforma.</li>
+                    <div className="mt-2"></div>
+                    <li>A adição de suporte a múltiplos idiomas permitiu a expansão da plataforma para novos mercados, aumentando a diversidade de usuários.</li>
+                  </ul>
+                </div>
+                
+                {/* Soft Skills Adquiridas */}
+                <div className="mt-4">
+                  <h3 className="text-[#1387f1] font-semibold text-lg">Soft Skills Adquiridas:</h3>
+                  <ul className="list-disc pl-5 text-[#dbd6d3] text-sm">
+                  <div className="mt-2"></div>
+                    <li><strong>Trabalho em Equipe:</strong> Colaborei de forma eficaz com outros desenvolvedores e membros da equipe para entregar uma plataforma de alta qualidade.</li>
+                    <div className="mt-2"></div>
+                    <li><strong>Gestão de Tempo:</strong> Aprimorei minhas habilidades de gerenciamento de tempo para lidar com múltiplas tarefas e cumprir prazos apertados.</li>
+                    <div className="mt-2"></div>
+                    <li><strong>Comunicação Eficaz:</strong> Melhorei a comunicação com equipes interdisciplinares, facilitando a implementação de funcionalidades e garantindo que todos estivessem alinhados com os objetivos do projeto.</li>
+                    <div className="mt-2"></div>
+                    <li><strong>Resolução de Problemas:</strong> Desenvolvi uma abordagem analítica para diagnosticar e resolver problemas técnicos de forma eficiente, especialmente durante a automação e integração de IA.</li>
+                  </ul>
+                </div>
+
+                <div className="flex justify-center">
+                  <a href="https://www.youtube.com" target="_blank" className="inline-block mt-8 px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-semibold w-fit">Visualização do Projeto</a>
+                </div>
+
               </div>
             ))}
           </div>

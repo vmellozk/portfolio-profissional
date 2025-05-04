@@ -55,9 +55,7 @@ export default function App() {
   const projects = [
     { id: "3", title: "Website Design", description: "Design de websites e apps", image: "images/.png" },
     { id: "2", title: "App Design", description: "Design de aplicativos móveis", image: "images/.png" },
-    { id: "6", title: "E-commerce Platform", description: "Plataforma de e-commerce com integração de pagamentos", image: "images/.png" },
-    { id: "6", title: "E-commerce Platform", description: "Plataforma de e-commerce com integração de pagamentos", image: "images/.png" },
-    
+    { id: "6", title: "E-commerce Platform", description: "Plataforma de e-commerce com integração de pagamentos", image: "images/.png" }
   ];
 
   const projectsPerPage = 3;
@@ -174,7 +172,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* About/Stats Section */}
+        {/* About Section */}
         <section id="about" className="container max-w-6xl mx-auto grid md:grid-cols-2 gap-2 items-center rounded-3xl p-10 bg-[#061c30]/80 shadow-xl relative">
         <div className="flex gap-6">
           <div className="grid grid-cols-3 grid-rows-3 gap-2 w-[500px] h-[750px]">
@@ -230,18 +228,20 @@ export default function App() {
         {/* Projects */}
         <section id="projects" className="container max-w-6xl mx-auto">
           <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3">Meu trabalho</h4>
-          <h2 className="text-3xl font-extrabold mb-3">Projetos Recentes</h2>
+          <h2 className="text-3xl font-extrabold mb-8">
+            Projetos Recentes
+            </h2>
 
           <div className="relative">
             <button onClick={scrollLeftprojects} className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full z-10 hover:bg-[#1387f1]">◀</button>
           
             <div
               ref={scrollContainerProjects}
-              className="flex gap-6 overflow-x-auto py-6 px-14 scroll-smooth scrollbar-hide"
+              className="overflow-x-auto scroll-smooth px-14 py-4 scrollbar-hide"
               style={{ display: 'flex', gap: '1rem', justifyContent: 'center', margin: '0 auto',}}
             >
             {currentProjects.map(({id, title, description, image }) => (
-              <div className="min-w-[300px] bg-[#093359] rounded-2xl p-4 shadow-lg flex flex-col gap-4">
+              <div className="w-[300px] bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col gap-4 transtition-all duration-300">
                 <img
                   src={`${image}`}
                   alt={`Projeto ${id}`}

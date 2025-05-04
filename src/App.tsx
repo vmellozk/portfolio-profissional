@@ -197,26 +197,24 @@ export default function App() {
 
         {/* Projects */}
         <section id="projects" className="container max-w-6xl mx-auto">
-          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3">
-            Meu trabalho
-          </h4>
+          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3">Meu trabalho</h4>
           <h2 className="text-3xl font-extrabold mb-3">Projetos Recentes</h2>
           <div className="flex gap-6 overflow-x-auto py-6">
-            {["3836170032", "2927336650", "2675729942"].map((id, idx) => (
-              <div
-                key={id}
-                className="min-w-[300px] bg-[#093359] rounded-2xl p-4 shadow-lg flex flex-col gap-4"
-              >
+            {[
+              { id: "3836170032", title: "Website Design", description: "Design de websites e apps", image: "images/.png" },
+              { id: "2927336650", title: "App Design", description: "Design de aplicativos móveis", image: "images/.png" },
+              { id: "2675729942", title: "E-commerce Platform", description: "Plataforma de e-commerce com integração de pagamentos", image: "images/.png" }
+
+            ].map((project) => (
+              <div key={project.id} className="min-w-[300px] bg-[#093359] rounded-2xl p-4 shadow-lg flex flex-col gap-4">
                 <img
-                  src={`https://ext.same-assets.com/730972434/${id}.jpeg`}
-                  alt={`Project ${idx + 1}`}
-                  className="w-full h-40 object-cover rounded-xl mb-3"
+                  src={`${project.image}`}
+                  alt={`Project ${project.id}`}
+                  className="w-full h-40 object-cover rounded-xl mb-3" 
                 />
                 <div>
-                  <div className="uppercase text-xs text-[#4da5d2]">
-                    Website Design
-                  </div>
-                  <div className="font-bold">Web Design, App Design</div>
+                  <div className="uppercase text-xs text-[#4da5d2]">{project.title}</div>
+                  <div className="font-bold">{project.description}</div>
                 </div>
               </div>
             ))}

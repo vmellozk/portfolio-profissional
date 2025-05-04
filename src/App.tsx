@@ -53,9 +53,11 @@ export default function App() {
   const [pageProjects, setPageProjects] = useState(0);
 
   const projects = [
-    { id: "3", title: "Website Design", description: "Design de websites e apps", image: "images/.png" },
-    { id: "2", title: "App Design", description: "Design de aplicativos móveis", image: "images/.png" },
-    { id: "6", title: "E-commerce Platform", description: "Plataforma de e-commerce com integração de pagamentos", image: "images/.png" }
+    { id: "1", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
+    { id: "2", title: "Bot Discord", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
+    { id: "3", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
+    { id: "4", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
+    { id: "5", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
   ];
 
   const projectsPerPage = 3;
@@ -240,16 +242,21 @@ export default function App() {
               className="overflow-x-auto scroll-smooth px-14 py-4 scrollbar-hide"
               style={{ display: 'flex', gap: '1rem', justifyContent: 'center', margin: '0 auto',}}
             >
-            {currentProjects.map(({id, title, description, image }) => (
-              <div className="w-[300px] bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col gap-4 transtition-all duration-300">
+            {currentProjects.map(({id, title, description, image, repoLink, viewProject }) => (
+              <div className="w-[300px] bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col justify-between gap-4 transtition-all duration-300">
                 <img
                   src={`${image}`}
                   alt={`Projeto ${id}`}
                   className="w-full h-40 object-cover rounded-xl mb-3" 
                 />
-                <div>
-                  <div className="uppercase text-xs text-[#4da5d2]">{title}</div>
-                  <div className="font-bold">{description}</div>
+                <div className="flex flex-col flex-grow">
+                  <div className="uppercase text-xs text-[#4da5d2] font-semibold">{title}</div>
+                  <div className="mt-1 text-[#dbd6d3] flex-grow">{description}</div>
+
+                  <div className="mt-4 flex gap-2 justify-center">
+                    <a href={repoLink} target="_blank" className="bg-[#4da5d2] hover:bg-[#1387f1] text-white text-sm px-4 py-2 rounded-md transition-colors duration-200">Repositório</a>
+                    <a href={viewProject} target="_blank" className="bg-transparent border border-[#4da5d2] hover:bg-[#1387f1] text-white text-sm px-4 py-2 rounded-md transition-colors duration-200">Ver Projeto</a>
+                  </div>
                 </div>
               </div>
             ))}

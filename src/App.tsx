@@ -53,11 +53,11 @@ export default function App() {
   const [pageProjects, setPageProjects] = useState(0);
 
   const projects = [
-    { id: "1", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
-    { id: "2", title: "Bot Discord", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
-    { id: "3", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
-    { id: "4", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
-    { id: "5", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/.png", repoLink: "https://", viewProject: "https://" },
+    { id: "Encurtador de URL", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/encurtador_url_of.png", repoLink: "https://", viewProject: "https://" },
+    { id: "Bot Discord", title: "Bot Discord", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/bot_discord_of.png", repoLink: "https://", viewProject: "https://" },
+    { id: "Downloader de Mídia", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://", viewProject: "https://" },
+    { id: "Criador de Legendas", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/criador_legendas_of.png", repoLink: "https://", viewProject: "https://" },
+    { id: "Automação de Certificados", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/certificados_of.png", repoLink: "https://", viewProject: "https://" },
   ];
 
   const projectsPerPage = 3;
@@ -246,7 +246,7 @@ export default function App() {
               <div className="w-[300px] bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col justify-between gap-4 transtition-all duration-300">
                 <img
                   src={`${image}`}
-                  alt={`Projeto ${id}`}
+                  alt={`${id}`}
                   className="w-full h-40 object-cover rounded-xl mb-3" 
                 />
                 <div className="flex flex-col flex-grow">

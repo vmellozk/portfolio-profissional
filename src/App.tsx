@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { Mail, Github, Instagram, Phone, Linkedin } from 'lucide-react';
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  
   const scrollContainer = useRef<HTMLDivElement | null>(null);
   const [page, setPage] = useState(0);
   const [technologiesPerPage, setTechnologiesPerPage] = useState(3);
@@ -107,50 +109,144 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-[#061c30] to-[#093359] text-white font-sans">
-      {/* Navbar */}
-      <nav className="flex justify-between items-center px-4 md:px-8 py-6 bg-[#061c30]/50 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
-        <div className="flex items-center">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/6213/6213731.png"
-            alt="logo"
-            className="w-10 h-10 mr-2"
-          />
-          <span className="text-xl font-bold"></span>
-        </div>
-        <ul className="hidden md:flex gap-8 text-lg">
-          <li>
-            <a href="#hero" className="hover:text-[#1387f1] transition">
-              Início
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-[#1387f1] transition">
-              Sobre
-            </a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-[#1387f1] transition">
-              Projetos
-            </a>
-          </li>
-          <li>
-            <a href="#experience" className="hover:text-[#1387f1] transition">
-              Experiência
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-[#1387f1] transition">
-              Stack
-            </a>
-          </li>
-        </ul>
-        <a
-          href="#contact"
-          className="ml-4 md:ml-6 px-5 md:px-6 py-2 rounded-full font-semibold bg-[#1387f1] shadow-lg hover:bg-[#093359] border border-[#1387f1] transition"
-        >
-          Contato
-        </a>
-      </nav>
+    {/* Navbar */}
+    <nav className="flex justify-between items-center px-4 md:px-8 py-6 bg-[#061c30]/50 backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+      <div className="flex items-center">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/6213/6213731.png"
+          alt="logo"
+          className="w-10 h-10 mr-2"
+        />
+        <span className="text-xl font-bold"></span>
+      </div>
+
+      {/* Menu desktop */}
+      <ul className="hidden md:flex gap-8 text-lg">
+        <li>
+          <a href="#hero" className="hover:text-[#1387f1] transition">
+            Início
+          </a>
+        </li>
+        <li>
+          <a href="#about" className="hover:text-[#1387f1] transition">
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a href="#projects" className="hover:text-[#1387f1] transition">
+            Projetos
+          </a>
+        </li>
+        <li>
+          <a href="#experience" className="hover:text-[#1387f1] transition">
+            Experiência
+          </a>
+        </li>
+        <li>
+          <a href="#services" className="hover:text-[#1387f1] transition">
+            Stack
+          </a>
+        </li>
+      </ul>
+
+      <a
+        href="#contact"
+        className="hidden md:inline-block ml-4 md:ml-6 px-5 md:px-6 py-2 rounded-full font-semibold bg-[#1387f1] shadow-lg hover:bg-[#093359] border border-[#1387f1] transition"
+      >
+        Contato
+      </a>
+
+      {/* Botão hamburger mobile */}
+      <button
+        className="md:hidden ml-4 focus:outline-none"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        {menuOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        )}
+      </button>
+    </nav>
+
+    {/* Menu mobile */}
+    {menuOpen && (
+      <ul className="md:hidden flex flex-col items-center gap-6 bg-[#061c30]/90 backdrop-blur-md fixed top-[72px] left-0 right-0 z-40 py-6 text-lg">
+        <li>
+          <a
+            href="#hero"
+            className="hover:text-[#1387f1] transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Início
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            className="hover:text-[#1387f1] transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            className="hover:text-[#1387f1] transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Projetos
+          </a>
+        </li>
+        <li>
+          <a
+            href="#experience"
+            className="hover:text-[#1387f1] transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Experiência
+          </a>
+        </li>
+        <li>
+          <a
+            href="#services"
+            className="hover:text-[#1387f1] transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Stack
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            className="px-6 py-2 rounded-full font-semibold bg-[#1387f1] shadow-lg hover:bg-[#093359] border border-[#1387f1] transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contato
+          </a>
+        </li>
+      </ul>
+    )}
 
       {/* Content sections */}
       <main className="pt-28 space-y-32">

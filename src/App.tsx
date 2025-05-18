@@ -553,7 +553,7 @@ export default function App() {
                     Julho 2024 - Janeiro 2025 • Estágio
                   </span>
                 </div>
-                <div className="text-[#dbd6d3] text-sm max-h-60 overflow-auto leading-relaxed">
+                <div className="text-[#dbd6d3] text-sm max-h-60 overflow-auto leading-relaxed min-h-[17rem]">
                   Desenvolvimento de uma plataforma inovadora para geração e comercialização de eBooks personalizados com base em formulários interativos preenchidos por profissionais. O sistema utiliza Inteligência Artificial para gerar conteúdo único e personalizado, oferecendo uma experiência de compra e venda automatizada. A plataforma inclui funcionalidades avançadas, como sistema de afiliados, cadastro de usuários, loja online, e suporte a múltiplos idiomas.
                 </div>
 
@@ -675,7 +675,7 @@ export default function App() {
             action="https://formsubmit.co/contato.devictormello@gmail.com"
             method="POST"
             target="_blank"
-            className="flex flex-col gap-4 max-w-md mx-auto md:mx-0"
+            className="flex flex-col gap-4 max-w-md mx-auto md:mx-0 min-w-[18rem]"
           >
             <input
               type="text"

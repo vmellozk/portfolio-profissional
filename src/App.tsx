@@ -47,8 +47,8 @@ export default function App() {
     { title: "C#", image: "images/csharp.png", description: "Linguagem orientada a objetos utilizada em aplicações desktop e web. Estou em processo contínuo de aprendizado e sigo explorando suas aplicações em diferentes contextos de desenvolvimento.", rating: 1 },
     { title: "Java", image: "images/java.png", description: "Linguagem versátil usada para aplicações multiplataforma. Estou em processo contínuo de aprendizado e sigo explorando suas aplicações em diferentes contextos de desenvolvimento.", rating: 1 },
     { title: "React Native", image: "images/reactnative.png", description: "Framework para desenvolvimento mobile, utilizado para criar aplicações nativas para Android e iOS. Estou em processo contínuo de aprendizado e sigo explorando suas aplicações em diferentes contextos de desenvolvimento.", rating: 1 },
-    { title: "HTML", image: "images/html.png", description: "Linguagem de marcação estruturante das páginas web. Apesar de não ser o meu foco, possuo conhecimentos básicos, já tendo utilizado em projetos estruturando páginas, criando formulários, tabelas e integrado CSS e JavaScript.", rating: 3 },
-    { title: "CSS", image: "images/css.png", description: "Linguagem de estilo para personalizar o layout e a aparência visual das páginas web. Apesar de não ser o meu foco, possuo conhecimentos básicos, já tendo utilizado em projetos estilizando páginas, ajustando layouts e interações visuais.", rating: 3 },
+    { title: "HTML", image: "images/html.png", description: "Linguagem de marcação estruturante das páginas web. Apesar de não ser o meu foco, possuo conhecimentos básicos, já tendo utilizado em projetos estruturando páginas, criando formulários, tabelas e integrado CSS e JavaScript.", rating: 2 },
+    { title: "CSS", image: "images/css.png", description: "Linguagem de estilo para personalizar o layout e a aparência visual das páginas web. Apesar de não ser o meu foco, possuo conhecimentos básicos, já tendo utilizado em projetos estilizando páginas, ajustando layouts e interações visuais.", rating: 2 },
   ];
 
   const totalPages = Math.ceil(technologies.length / technologiesPerPage);
@@ -239,7 +239,7 @@ export default function App() {
         <li>
           <a
             href="#contact"
-            className="px-6 py-2 rounded-full font-semibold bg-[#1387f1] shadow-lg hover:bg-[#093359] border border-[#1387f1] transition"
+            className="hover:text-[#1387f1] transition"
             onClick={() => setMenuOpen(false)}
           >
             Contato
@@ -409,8 +409,8 @@ export default function App() {
 
         {/* Projects */}
         <section id="projects" className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3">Meu trabalho</h4>
-          <h2 className="text-3xl font-extrabold mb-8">Projetos Recentes</h2>
+          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3 text-center lg:text-left">Meu trabalho</h4>
+          <h2 className="text-3xl font-extrabold mb-8 text-center lg:text-left">Projetos Recentes</h2>
 
           <div className="relative">
             <button
@@ -423,13 +423,13 @@ export default function App() {
 
             <div
               ref={scrollContainerProjects}
-              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-start sm:justify-center"
+              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-start justify-center"
               style={{ margin: '0 auto' }}
             >
               {currentProjects.map(({ id, title, description, image, repoLink, viewProject }) => (
                 <div
                   key={id}
-                  className="flex-shrink-0 w-72 sm:w-72 md:w-80 bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300"
+                  className="flex-shrink-0 w-72 sm:w-72 md:w-80 bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col justify-between gap-4 transition-all duration-300 min-h-[26rem] min-w-[18rem]"
                 >
                   <img
                     src={image}
@@ -475,8 +475,8 @@ export default function App() {
 
         {/* Stacks */}
         <section id="services" className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3">Stacks</h4>
-          <h2 className="text-3xl font-extrabold mb-8">
+          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3 text-center lg:text-left">Stacks</h4>
+          <h2 className="text-3xl font-extrabold mb-8 text-center lg:text-left">
             Algumas <span className="text-[#1387f1]">tecnologias</span> que uso ou já usei
           </h2>
 
@@ -491,13 +491,13 @@ export default function App() {
 
             <div
               ref={scrollContainer}
-              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-start sm:justify-center"
+              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-start justify-center"
               style={{ margin: '0 auto' }}
             >
               {currentTechnologies.map(({ title, image, description, rating }) => (
                 <div
                   key={title}
-                  className="bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center w-56 sm:w-64 h-[420px] flex-shrink-0 transition-all duration-300"
+                  className="bg-[#093359] rounded-2xl p-6 shadow-lg flex flex-col items-center text-center w-56 sm:w-64 h-[420px] flex-shrink-0 transition-all duration-300 min-h-[26rem] min-w-[18rem]"
                 >
                   <img src={image} alt={title} className="h-20 my-3" />
                   <div className="text-lg font-bold mb-2 text-white">{title}</div>
@@ -532,10 +532,10 @@ export default function App() {
 
         {/* Experience */}
         <section id="experience" className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3">
+          <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold mb-3 text-center lg:text-left">
             Experiência
           </h4>
-          <h2 className="text-3xl font-extrabold mb-8">
+          <h2 className="text-3xl font-extrabold mb-8 text-center lg:text-left">
             Minha experiência profissional como <span className="text-[#1387f1]">Desenvolvedor</span>
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-1">

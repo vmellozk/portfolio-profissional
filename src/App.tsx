@@ -264,14 +264,28 @@ export default function App() {
               <br />
               <span className="block text-[#1387f1]">Desenvolvedor Backend Jr.</span>
             </h1>
+
+            {/* Imagem SÓ no MOBILE */}
+            <div className="flex justify-center items-center mt-6 lg:hidden">
+              <img
+                src="images/perfil.png"
+                alt="Victor"
+                className="rounded-2xl shadow-2xl w-56 sm:w-64 md:w-72 h-auto max-h-96 object-cover bg-[#093359]"
+              />
+            </div>
+
             <p className="text-[#dbd6d3] max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
               Tenho 24 anos e 1 ano de experiência atuando com Python, Flask e Selenium, desenvolvendo sistemas eficientes e escaláveis, com foco em dados e backend. Sou Graduado e Pós-Graduado, e atualmente estudo outras tecnologias para expandir minha base como desenvolvedor backend — sempre mantendo meu foco principal em dados e infraestrutura. Sou apaixonado por inovação e tenho como objetivo me tornar Engenheiro de Dados.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
-              <a href="files/Curriculo.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-medium">
+              <a
+                href="files/Curriculo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-medium"
+              >
                 Currículo
               </a>
-
               <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full">
                 <img src="images/python.png" alt="Python" />
               </a>
@@ -287,7 +301,8 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex-1 flex justify-center items-center mt-10 lg:mt-0">
+          {/* Imagem SÓ no DESKTOP */}
+          <div className="hidden lg:flex flex-1 justify-center items-center mt-10 lg:mt-0">
             <img
               src="images/perfil.png"
               alt="Victor"

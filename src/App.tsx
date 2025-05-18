@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Mail, Github, Instagram, Phone } from 'lucide-react';
+import { Mail, Github, Instagram, Phone, Linkedin } from 'lucide-react';
 
 export default function App() {
   const scrollContainer = useRef<HTMLDivElement | null>(null);
@@ -53,11 +53,11 @@ export default function App() {
   const [pageProjects, setPageProjects] = useState(0);
 
   const projects = [
-    { id: "Encurtador de URL", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/encurtador_url_of.png", repoLink: "https://", viewProject: "https://" },
-    { id: "Bot Discord", title: "Bot Discord", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/bot_discord_of.png", repoLink: "https://github.com/vmellozk/Bot_Discord", viewProject: "https://" },
-    { id: "Downloader de Mídia", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://", viewProject: "https://" },
+    { id: "Downloader de Mídia", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://github.com/vmellozk/downloader-midia", viewProject: "https://" },
     { id: "Criador de Legendas", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/criador_legendas_of.png", repoLink: "https://github.com/vmellozk/Legendas_Auto", viewProject: "https://" },
+    { id: "Encurtador de URL", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/encurtador_url_of.png", repoLink: "https://github.com/vmellozk/encurtador-url", viewProject: "https://" },
     { id: "Automação de Certificados", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/certificados_of.png", repoLink: "https://github.com/vmellozk/Certificados_Auto", viewProject: "https://" },
+    { id: "Bot Discord", title: "Bot Discord (Em Desenvolvimento)", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/bot_discord_of.png", repoLink: "https://github.com/vmellozk/Bot_Discord", viewProject: "https://" }
   ];
 
   const projectsPerPage = 3;
@@ -137,7 +137,7 @@ export default function App() {
         >
           <div className="flex-1 space-y-6">
             <p className="uppercase tracking-wide text-sm text-[#4da5d2] mb-2">
-              Victor Mello | Desenvolvedor Backend, Analista de Dados
+              Victor Mello | Desenvolvedor Backend
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-2">
               Olá! Eu sou o Victor,
@@ -145,7 +145,7 @@ export default function App() {
               <span className="block text-[#1387f1]">Desenvolvedor Backend Jr.</span>
             </h1>
             <p className="text-[#dbd6d3] max-w-xl">
-            Tenho 24 anos com 1 ano de experiência atuando com Python, Flask e Selenium, criando sistemas eficientes e escaláveis, com foco em dados e backend. Graduado e Pós Graduado, atualmente continuo expandindo o meu conhecimento estudando: C#, Java e React Native. Sou apaixonado por inovação e tenho como objetivo me tornar Engenheiro de Dados, trabalhando com manipulação e análise de grandes volumes de dados.
+            Tenho 24 anos e 1 ano de experiência atuando com Python, Flask e Selenium, desenvolvendo sistemas eficientes e escaláveis, com foco em dados e backend. Sou Graduado e Pós-Graduado, e atualmente estudo outras tecnologias para expandir minha base como desenvolvedor backend — sempre mantendo meu foco principal em dados e infraestrutura. Sou apaixonado por inovação e tenho como objetivo me tornar Engenheiro de Dados.
             </p>
             <div className="flex gap-3 mt-4">
               <a href="files/Curriculo.pdf" target="_blank" className="px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-medium">Currículo</a>
@@ -156,11 +156,11 @@ export default function App() {
               <a href="#" className="w-9 h-10 flex items-center justify-center rounded-full">
                 <img src="images/database.png" alt="SQL"/>
               </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full">
-                <img src="images/html.png" alt="HTML"/>
+              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full">
+                <img src="images/selenium.png" alt="CSS"/>
               </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full">
-                <img src="images/css.png" alt="CSS"/>
+              <a href="#" className="w-11 h-10 flex items-center justify-center rounded-full">
+                <img src="images/flask.png" alt="HTML"/>
               </a>
             </div>
             
@@ -213,12 +213,12 @@ export default function App() {
                  <div className="uppercase text-xs text-[#dbd6d3]">Anál. Desenv. Sistemas,<br></br>Anhanguera</div>
                </div>
                <div>
-                 <h3 className="text-xl font-bold text-[#1387f1]">Especialização</h3>
+                 <h3 className="text-xl font-bold text-[#1387f1]">Pós-Graduação</h3>
                  <div className="uppercase text-xs text-[#dbd6d3]">Gestão de Dados - BigData,<br></br>Estácio</div>
                </div>
                <div>
                  <h3 className="text-xl font-bold text-[#1387f1]">1.000.000+</h3>
-                 <div className="uppercase text-xs text-[#dbd6d3]"> Views - Redes Sociais,<br></br>Outro Nicho</div>
+                 <div className="uppercase text-xs text-[#dbd6d3]"> Views - Redes Sociais,<br></br>Nicho Gamer</div>
                </div>
 
             </div>
@@ -404,7 +404,7 @@ export default function App() {
               Entre em contato
             </div>
             <div className="text-center text-[#dbd6d3] text-sm">
-              Tecnologia é só o meio. Resolver problemas reais com visão de negócio é o que me move.
+              Construo soluções escaláveis com foco no problema, não só no código. Me chama e vamos conversar sobre seu projeto.
             </div>
             <div className="mt-8 flex justify-center gap-6 text-[#1387f1]">
               <a href="mailto:contato.devictormello@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -412,6 +412,9 @@ export default function App() {
               </a>
               <a href="https://github.com/vmellozk" target="_blank" rel="noopener noreferrer">
                 <Github className="w-6 h-6 hover:text-blue-600 transition-colors" />
+              </a>
+              <a href="https://www.linkedin.com/in/victor-mello-b9686a2b9/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-6 h-6 hover:text-blue-600 transition-colors" />
               </a>
               <a href="https://www.instagram.com/vmellozk" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-6 h-6 hover:text-blue-600 transition-colors" />
@@ -466,9 +469,8 @@ export default function App() {
 
               <h3 className="text-xl font-bold mb-4 mt-8 text-[#4da5d2]">Em Andamento</h3>
               <ul className="list-disc list-inside space-y-2 text-[#dbd6d3] text-sm text-left">
-                <li>C# Completo, Programação Orientada a Objetos | Udemy</li>
-                <li>React Native | Udemy</li>
-                <li>Java Cloud Native | Bradesco</li>
+                <li>Formação Engenharia de Dados: Big Data</li>
+                <li>Curso de Inglês, Paulo Andrade</li>
               </ul>
               
             </div>

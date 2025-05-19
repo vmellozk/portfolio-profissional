@@ -279,7 +279,7 @@ export default function App() {
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
               <a
-                href="files/Curriculo.pdf"
+                href="docs/Curriculo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-medium"

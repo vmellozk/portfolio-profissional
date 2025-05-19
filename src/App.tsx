@@ -80,11 +80,11 @@ export default function App() {
   const scrollContainerProjects = useRef<HTMLDivElement | null>(null);
 
   const projects = [
-    { id: "Downloader de Mídia", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://github.com/vmellozk/downloader-midia", viewProject: "https://" },
-    { id: "Criador de Legendas", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/criador_legendas_of.png", repoLink: "https://github.com/vmellozk/Legendas_Auto", viewProject: "https://" },
-    { id: "Encurtador de URL", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/encurtador_url_of.png", repoLink: "https://github.com/vmellozk/encurtador-url", viewProject: "https://" },
-    { id: "Automação de Certificados", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/certificados_of.png", repoLink: "https://github.com/vmellozk/Certificados_Auto", viewProject: "https://" },
-    { id: "Bot Discord", title: "Bot Discord (Em Desenvolvimento)", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/bot_discord_of.png", repoLink: "https://github.com/vmellozk/Bot_Discord", viewProject: "https://" }
+    { id: "Downloader de Mídia", title: "Downloader de Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://github.com/vmellozk/downloader-midia", viewProject: "https://youtu.be/5T__ed89DhM" },
+    { id: "Criador de Legendas", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/criador_legendas_of.png", repoLink: "https://github.com/vmellozk/Legendas_Auto", viewProject: "https://youtu.be/VgotVRvI0uw" },
+    { id: "Encurtador de URL", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/encurtador_url_of.png", repoLink: "https://github.com/vmellozk/encurtador-url", viewProject: "https://youtu.be/M-yneh7qwiU" },
+    { id: "Automação de Certificados", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/certificados_of.png", repoLink: "https://github.com/vmellozk/Certificados_Auto", viewProject: "https://github.com/vmellozk/Certificados_Auto" },
+    { id: "Bot Discord", title: "Bot Discord (Em Desenvolvimento)", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/bot_discord_of.png", repoLink: "https://github.com/vmellozk/Bot_Discord", viewProject: "https://github.com/vmellozk/Bot_Discord" }
   ];
 
   const totalProjects = Math.ceil(projects.length / projectsPerPage);
@@ -553,7 +553,7 @@ export default function App() {
                     Julho 2024 - Janeiro 2025 • Estágio
                   </span>
                 </div>
-                <div className="text-[#dbd6d3] text-sm max-h-60 overflow-auto leading-relaxed min-h-[17rem]">
+                <div className="text-[#dbd6d3] text-sm max-h-80 overflow-auto leading-relaxed">
                   Desenvolvimento de uma plataforma inovadora para geração e comercialização de eBooks personalizados com base em formulários interativos preenchidos por profissionais. O sistema utiliza Inteligência Artificial para gerar conteúdo único e personalizado, oferecendo uma experiência de compra e venda automatizada. A plataforma inclui funcionalidades avançadas, como sistema de afiliados, cadastro de usuários, loja online, e suporte a múltiplos idiomas.
                 </div>
 
@@ -596,16 +596,6 @@ export default function App() {
                   </ul>
                 </div>
 
-                <div className="flex justify-center">
-                  <a
-                    href="https://www.youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-8 px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-semibold w-fit"
-                  >
-                    Visualização do Projeto
-                  </a>
-                </div>
               </div>
             ))}
           </div>

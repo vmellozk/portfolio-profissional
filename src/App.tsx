@@ -275,7 +275,7 @@ export default function App() {
             </div>
 
             <p className="text-[#dbd6d3] max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
-              Tenho 24 anos e 1 ano de experiência atuando com Python, Flask e Selenium, desenvolvendo sistemas eficientes e escaláveis, com foco em dados e backend. Sou Graduado e Pós-Graduado, e atualmente estudo outras tecnologias para expandir minha base como desenvolvedor backend — sempre mantendo meu foco principal em dados e infraestrutura. Sou apaixonado por inovação e tenho como objetivo me tornar Engenheiro de Dados.
+              Tenho experiência com Python, Flask e Selenium no desenvolvimento de sistemas robustos voltados à automação, APIs e manipulação de dados. Atuo na criação de soluções com IA e Banco de Dados, sempre priorizando desempenho e boas práticas de backend. Atualmente, direciono minha carreira para Engenharia de Dados, com foco em Pipelines, ETL e Cloud. Com vivência em liderança como Oficial do Exército, trago disciplina, proatividade e foco em resultados para os projetos em que atuo.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
               <a

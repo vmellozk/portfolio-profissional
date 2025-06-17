@@ -80,6 +80,7 @@ export default function App() {
   const scrollContainerProjects = useRef<HTMLDivElement | null>(null);
 
   const projects = [
+    { id: "Sistema Financeiro", title: "Sistema Financeiro", description: "CRUD completo focado na organização de ativos, alocação de investimentos e no controle de clientes", image: "images/sistema_financeiro.png", repoLink: "https://github.com/vmellozk/crud-sistema-financeiro-node", viewProject: "https://github.com/vmellozk/crud-sistema-financeiro-node" },
     { id: "Downloader de Mídia", title: "Downloader Mídia (Em Desenvolvimento)", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://github.com/vmellozk/downloader-midia", viewProject: "https://youtu.be/5T__ed89DhM" },
     { id: "ChatBot WhatsApp com IA", title: "ChatBot WhatsApp com IA", description: "Automação de atendimento via WhatsApp com IA, integrando n8n, Google Sheets e Google Calendar.", image: "images/chatbot-n8n.jpg", repoLink: "https://github.com/vmellozk/n8n-atendimento-bot", viewProject: "https://github.com/vmellozk/n8n-atendimento-bot" },
     { id: "Criador de Legendas", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/criador_legendas_of.png", repoLink: "https://github.com/vmellozk/Legendas_Auto", viewProject: "https://youtu.be/VgotVRvI0uw" },
@@ -258,12 +259,12 @@ export default function App() {
         >
           <div className="flex-1 space-y-6 text-center lg:text-left">
             <p className="uppercase tracking-wide text-sm text-[#4da5d2] mb-2">
-              Victor Mello | Desenvolvedor Backend
+              Victor Mello | Desenvolvedor Full Stack
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-2">
-              Olá! Eu sou o Victor,
+              Olá! Eu sou o Victor, apaixonado por
               <br />
-              <span className="block text-[#1387f1]">Desenvolvedor Backend Jr.</span>
+              <span className="block text-[#1387f1]">tecnologia, bike e contato com a natureza.</span>
             </h1>
 
             {/* Imagem SÓ no MOBILE */}
@@ -276,7 +277,7 @@ export default function App() {
             </div>
 
             <p className="text-[#dbd6d3] max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
-              Tenho experiência com Python, Flask e Selenium no desenvolvimento de sistemas robustos voltados à automação, APIs e manipulação de dados. Atuo na criação de soluções com IA e Banco de Dados, sempre priorizando desempenho e boas práticas de backend. Atualmente, direciono minha carreira para Engenharia de Dados, com foco em Pipelines, ETL e Cloud. Com vivência em liderança como Oficial do Exército, trago disciplina, proatividade e foco em resultados para os projetos em que atuo.
+              Tenho experiência em Python, Flask, Selenium e IA, tendo desenvolvido do zero a plataforma Prática Sênior, que automatiza a geração e venda de eBooks personalizados. Atualmente, atuo em Engenharia de Dados, transformando dados em decisões inteligentes e estratégicas, sempre aplicando boas práticas e tecnologia de ponta. Minha formação inclui Análise e Desenvolvimento de Sistemas, pós-graduação em Big Data e, atualmente, especialização em Engenharia de Dados. Além disso, sou Oficial R2, trazendo disciplina e determinação para todos os meus projetos.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
               <a
@@ -382,7 +383,7 @@ export default function App() {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl font-bold text-[#1387f1]">Pós-Graduação</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-[#1387f1]">Pós-Grad</h3>
                 <div className="uppercase text-xs sm:text-sm text-[#dbd6d3]">
                   Gestão de Dados - BigData,
                   <br />
@@ -390,11 +391,17 @@ export default function App() {
                 </div>
               </div>
               <div>
+                <h3 className="text-lg sm:text-xl font-bold text-[#1387f1]">Pós-Grad</h3>
+                <div className="uppercase text-xs sm:text-sm text-[#dbd6d3]">
+                  Engenharia de Dados,
+                  <br />
+                  Anhanguera
+                </div>
+              </div>
+              <div>
                 <h3 className="text-lg sm:text-xl font-bold text-[#1387f1]">1.000.000+</h3>
                 <div className="uppercase text-xs sm:text-sm text-[#dbd6d3]">
-                  Views - Redes Sociais,
-                  <br />
-                  Nicho Gamer
+                  Views - Redes Sociais
                 </div>
               </div>
             </div>
@@ -636,7 +643,7 @@ export default function App() {
                 <Github className="w-5 h-5 sm:w-6 sm:h-6 hover:text-blue-600 transition-colors" />
               </a>
               <a
-                href="https://www.linkedin.com/in/victor-mello-b9686a2b9/"
+                href="https://www.linkedin.com/in/vxctormello/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

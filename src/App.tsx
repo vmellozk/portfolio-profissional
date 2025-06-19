@@ -357,7 +357,7 @@ export default function App() {
             <h4 className="uppercase tracking-widest text-[#4da5d2] font-semibold"> Sobre mim </h4>
 
             <h2 className="text-2xl sm:text-3xl md:text-3xl font-extrabold mb-3">
-              Desenvolvedor Backend e um Aspirante à Engenheiro de Dados.
+              Desenvolvedor Full Stack e um Aspirante à Engenheiro de Dados.
             </h2>
 
             <p className="text-[#dbd6d3] text-sm sm:text-base leading-relaxed">

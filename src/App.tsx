@@ -277,7 +277,7 @@ export default function App() {
             </div>
 
             <p className="text-[#dbd6d3] max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
-              Tenho experiência em Python, Flask, Selenium e IA, tendo desenvolvido do zero a plataforma Prática Sênior, que automatiza a geração e venda de eBooks personalizados. Atualmente, atuo em Engenharia de Dados, transformando dados em decisões inteligentes e estratégicas, sempre aplicando boas práticas e tecnologia de ponta. Minha formação inclui Análise e Desenvolvimento de Sistemas, pós-graduação em Big Data e, atualmente, especialização em Engenharia de Dados. Além disso, sou Oficial R2, trazendo disciplina e determinação para todos os meus projetos.
+              Tenho experiência com Python, Flask, Selenium e Inteligência Artificial, tendo desenvolvido do zero a plataforma Prática Sênior, que automatiza a geração e venda de eBooks personalizados. Atuo como desenvolvedor full stack e estou me especializando na área de Engenharia de Dados, com foco em transformar dados em decisões inteligentes e estratégicas. Minha formação inclui graduação em Análise e Desenvolvimento de Sistemas e Pós-Graduação em Gestão de Dados - Big Data. Além disso, sou Oficial R2, trazendo disciplina e determinação para todos os meus projetos. Aos fins de semana, costumo jogar no computador, sair para pedalar por distâncias mais longas e, às vezes, curtir uma praia ou cachoeira com amigos.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
               <a

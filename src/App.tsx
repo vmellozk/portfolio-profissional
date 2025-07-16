@@ -546,7 +546,7 @@ export default function App() {
                   </span>
                 </div>
                 <div className="text-[#dbd6d3] text-sm max-h-80 overflow-auto leading-relaxed">
-                  Desenvolvimento de uma plataforma inovadora para geração e comercialização de eBooks personalizados com base em formulários interativos preenchidos por profissionais. O sistema utiliza Inteligência Artificial para gerar conteúdo único e personalizado, oferecendo uma experiência de compra e venda automatizada. A plataforma inclui funcionalidades avançadas, como sistema de afiliados, cadastro de usuários, loja online, e suporte a múltiplos idiomas.
+                  Plataforma desenvolvida do zero para automatizar a geração e venda de eBooks personalizados a partir de formulários preenchidos por usuários. O sistema inclui controle de fila assíncrono, funcionalidades de afiliados, loja online, integração com IA, suporte multilíngue, envio automatizado de e-mails e publicação automática dos produtos com código de comissão, otimizando a operação e escalabilidade da plataforma.
                 </div>
 
                 {/* Principais Responsabilidades */}
@@ -557,10 +557,16 @@ export default function App() {
                       <strong>Desenvolvimento Full Stack:</strong>
                       <ul className="list-inside list-decimal pl-5 mt-1 space-y-1">
                         <li>
-                          <strong>Back-end:</strong> Estruturei a lógica do servidor usando Python e Flask, criando APIs robustas para gerenciar a interação entre os dados dos usuários, a geração de eBooks e o processamento de vendas. Implementei integração com o banco de dados SQLite3, modelando as tabelas para gerenciar dados de usuários, respostas, eBooks e transações de vendas. Além disso, configurei o processo de cadastro automatizado de produtos na plataforma de vendas, integrando com o sistema de e-commerce, fiz integração de IAs, processamento de filas e envio de emails automatizados.
+                          <strong>Back-end:</strong> Modelei toda a arquitetura com Python e Flask, estruturando APIs para geração, tradução e publicação de eBooks com IA. Implementei controle assíncrono de filas, integração com SQLite3 e automações com Selenium para publicação automatizada dos produtos na plataforma de vendas com link de afiliado.
                         </li>
                         <li>
-                          <strong>Front-end:</strong> Estruturei junto com outro Desenvolvedor interfaces responsivas com HTML, CSS e JavaScript, com foco na experiência do usuário, otimizando a navegação para personalização dos eBooks e melhorando a jornada de compra.
+                          <strong>Front-end:</strong> Desenvolvi a interface com HTML, CSS e Jinja2, priorizando a usabilidade no preenchimento do formulário e navegação na loja. Adicionei campo de busca inteligente com correção automática usando RapidFuzz.
+                        </li>
+                        <li>
+                          <strong>Infraestrutura:</strong> Estruturei o deploy com organização modular, variáveis de ambiente (.env) centralizadas e preparo da aplicação para produção com Gunicorn e Nginx.
+                        </li>
+                        <li>
+                          <strong>Segurança e Integrações:</strong> Configurei hashing de senhas com Bcrypt, envio automático de e-mails via SMTP, integração com a Google Translate API para conteúdo multilíngue e sistema de comissão por afiliados com Kiwify.
                         </li>
                       </ul>
                     </li>
@@ -571,9 +577,11 @@ export default function App() {
                 <div>
                   <h3 className="text-[#1387f1] font-semibold text-lg mb-2">Resultados e Impacto:</h3>
                   <ul className="list-disc pl-5 text-[#dbd6d3] text-sm space-y-2">
-                    <li>Otimizei a criação e distribuição de eBooks, economizando tempo dos usuários e oferecendo um produto altamente personalizável e automatizado.</li>
-                    <li>A automação com Selenium melhorou a eficiência da geração de eBooks, reduzindo a carga de trabalho manual e aumentando a escalabilidade da plataforma.</li>
-                    <li>A adição de suporte a múltiplos idiomas permitiu a expansão da plataforma para novos mercados, aumentando a diversidade de usuários.</li>
+                    <li>Reduzi em mais de 80% o tempo total necessário para gerar, personalizar e publicar eBooks com IA.</li>
+                    <li>Eliminei tarefas manuais, automatizando geração, tradução e publicação, aumentando a escalabilidade do negócio.</li>
+                    <li>Ampliei o alcance da plataforma para públicos internacionais com suporte multilíngue dinâmico.</li>
+                    <li>Melhorei a experiência de navegação e busca na loja com correção automática de palavras digitadas incorretamente.</li>
+                    <li>Gerei renda passiva para os usuários com sistema de comissionamento automático via link de afiliado.</li>
                   </ul>
                 </div>
 
@@ -581,10 +589,10 @@ export default function App() {
                 <div>
                   <h3 className="text-[#1387f1] font-semibold text-lg mb-2">Soft Skills Adquiridas:</h3>
                   <ul className="list-disc pl-5 text-[#dbd6d3] text-sm space-y-2">
-                    <li><strong>Trabalho em Equipe:</strong> Colaborei de forma eficaz com outros desenvolvedores e membros da equipe para entregar uma plataforma de alta qualidade.</li>
-                    <li><strong>Gestão de Tempo:</strong> Aprimorei minhas habilidades de gerenciamento de tempo para lidar com múltiplas tarefas e cumprir prazos apertados.</li>
-                    <li><strong>Comunicação Eficaz:</strong> Melhorei a comunicação com equipes interdisciplinares, facilitando a implementação de funcionalidades e garantindo que todos estivessem alinhados com os objetivos do projeto.</li>
-                    <li><strong>Resolução de Problemas:</strong> Desenvolvi uma abordagem analítica para diagnosticar e resolver problemas técnicos de forma eficiente, especialmente durante a automação e integração de IA.</li>
+                    <li><strong>Comunicação com Stakeholders:</strong> Mantive alinhamento constante com o gestor do projeto, garantindo clareza nas entregas e prioridades.</li>
+                    <li><strong>Autonomia Técnica:</strong> Assumi a liderança técnica da arquitetura e desenvolvimento, desde a concepção até o deploy.</li>
+                    <li><strong>Trabalho em Equipe:</strong> Colaborei em equipe enxuta com versionamento, controle de tarefas e testes contínuos em ambiente ágil.</li>
+                    <li><strong>Organização e Documentação:</strong> Documentei todo o sistema para facilitar manutenções futuras e expansão da plataforma.</li>
                   </ul>
                 </div>
 

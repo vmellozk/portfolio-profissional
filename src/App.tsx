@@ -44,9 +44,6 @@ export default function App() {
     { title: "MySQL", image: "images/mysql.png", description: "Sistema de gerenciamento de banco de dados relacional robusto. Apesar de ter maior domínio com outro SGBD, venho me aperfeiçoando aqui. Utilizado em projetos pessoais para criação e modelagem de tabelas relacionais.", rating: 2 },
     { title: "TypeScript", image: "images/typescript.png", description: "Superset do JavaScript que adiciona tipagem estática ao código, sendo mais confiável e robusto. Tive contato durante a construção deste portfólio, aplicando conceitos básicos e estruturação de componentes. Ainda em aprendizado contínuo.", rating: 2 },
     { title: "JavaScript", image: "images/javascript.png", description: "Linguagem para o desenvolvimento web para tornar interfaces mais dinâmicas e interativas. Já apliquei funcionalidades básicas de formulários, manipulação de DOM e integração de APIs. Ainda em aprendizado contínuo.", rating: 2 },
-    { title: "C#", image: "images/csharp.png", description: "Linguagem orientada a objetos utilizada em aplicações desktop e web. Estou em processo contínuo de aprendizado e sigo explorando suas aplicações em diferentes contextos de desenvolvimento.", rating: 1 },
-    { title: "Java", image: "images/java.png", description: "Linguagem versátil usada para aplicações multiplataforma. Estou em processo contínuo de aprendizado e sigo explorando suas aplicações em diferentes contextos de desenvolvimento.", rating: 1 },
-    { title: "React Native", image: "images/reactnative.png", description: "Framework para desenvolvimento mobile, utilizado para criar aplicações nativas para Android e iOS. Estou em processo contínuo de aprendizado e sigo explorando suas aplicações em diferentes contextos de desenvolvimento.", rating: 1 },
     { title: "HTML", image: "images/html.png", description: "Linguagem de marcação estruturante das páginas web. Apesar de não ser o meu foco, possuo conhecimentos básicos, já tendo utilizado em projetos estruturando páginas, criando formulários, tabelas e integrado CSS e JavaScript.", rating: 2 },
     { title: "CSS", image: "images/css.png", description: "Linguagem de estilo para personalizar o layout e a aparência visual das páginas web. Apesar de não ser o meu foco, possuo conhecimentos básicos, já tendo utilizado em projetos estilizando páginas, ajustando layouts e interações visuais.", rating: 2 },
   ];
@@ -85,8 +82,7 @@ export default function App() {
     { id: "ChatBot WhatsApp com IA", title: "ChatBot WhatsApp com IA", description: "Automação de atendimento via WhatsApp com IA, integrando n8n, Google Sheets e Google Calendar.", image: "images/chatbot-n8n.jpg", repoLink: "https://github.com/vmellozk/n8n-atendimento-bot", viewProject: "https://github.com/vmellozk/n8n-atendimento-bot" },
     { id: "Criador de Legendas", title: "Criador de Legendas", description: "Ferramenta que gera legendas automaticamente a partir de áudios ou vídeos usando reconhecimento de fala.", image: "images/criador_legendas_of.png", repoLink: "https://github.com/vmellozk/Legendas_Auto", viewProject: "https://youtu.be/VgotVRvI0uw" },
     { id: "Encurtador de URL", title: "Encurtador URL", description: "Sistema que transforma links longos em versões curtas e personalizáveis, com registro de cliques.", image: "images/encurtador_url_of.png", repoLink: "https://github.com/vmellozk/encurtador-url", viewProject: "https://youtu.be/M-yneh7qwiU" },
-    { id: "Automação de Certificados", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/certificados_of.png", repoLink: "https://github.com/vmellozk/Certificados_Auto", viewProject: "https://github.com/vmellozk/Certificados_Auto" },
-    { id: "Bot Discord", title: "Bot Discord (Em Desenvolvimento)", description: "Bot automatizado para Discord com comandos personalizados e integração com APIs externas.", image: "images/bot_discord_of.png", repoLink: "https://github.com/vmellozk/Bot_Discord", viewProject: "https://github.com/vmellozk/Bot_Discord" }
+    { id: "Automação de Certificados", title: "Automação de Certificados", description: "Sistema que gera e envia certificados personalizados automaticamente com base em formulários ou listas de presença.", image: "images/certificados_of.png", repoLink: "https://github.com/vmellozk/Certificados_Auto", viewProject: "https://github.com/vmellozk/Certificados_Auto" }
   ];
 
   const totalProjects = Math.ceil(projects.length / projectsPerPage);
@@ -277,7 +273,7 @@ export default function App() {
             </div>
 
             <p className="text-[#dbd6d3] max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
-              Tenho experiência com Python, Flask, Selenium e Inteligência Artificial, tendo desenvolvido do zero a plataforma Prática Sênior, que automatiza a geração e venda de eBooks personalizados. Atuo como desenvolvedor full stack e estou me especializando na área de Engenharia de Dados, com foco em transformar dados em decisões inteligentes e estratégicas. Minha formação inclui graduação em Análise e Desenvolvimento de Sistemas e Pós-Graduação em Gestão de Dados - Big Data. Além disso, sou Oficial R2, trazendo disciplina e determinação para todos os meus projetos. Aos fins de semana, costumo jogar no computador, sair para pedalar por distâncias mais longas e, às vezes, curtir uma praia ou cachoeira com amigos.
+              Tenho experiência com Python, Flask, Selenium e Inteligência Artificial, tendo desenvolvido do zero a plataforma Prática Sênior, que automatiza a geração e venda de eBooks personalizados. Atuo como desenvolvedor full stack e estou curso uma Pós Graduação área de Engenharia de Dados, com foco em transformar dados em decisões inteligentes e estratégicas. Minha formação inclui graduação em Análise e Desenvolvimento de Sistemas e Pós-Graduação em Gestão de Dados - Big Data. Além disso, sou Oficial R2, trazendo disciplina e determinação para todos os meus projetos. Aos fins de semana, costumo jogar no computador, sair para pedalar por distâncias mais longas e, às vezes, curtir uma praia ou cachoeira com amigos.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
               <a
@@ -287,18 +283,6 @@ export default function App() {
                 className="px-6 py-2 rounded-full bg-[#1387f1] hover:bg-[#093359] transition font-medium"
               >
                 Currículo
-              </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center rounded-full">
-                <img src="images/python.png" alt="Python" />
-              </a>
-              <a href="#" className="w-9 h-10 flex items-center justify-center rounded-full">
-                <img src="images/database.png" alt="SQL" />
-              </a>
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full">
-                <img src="images/selenium.png" alt="CSS" />
-              </a>
-              <a href="#" className="w-11 h-10 flex items-center justify-center rounded-full">
-                <img src="images/flask.png" alt="HTML" />
               </a>
             </div>
           </div>
@@ -735,8 +719,8 @@ export default function App() {
               Em Andamento
             </h3>
             <ul className="list-disc list-inside space-y-2 text-[#dbd6d3] text-xs sm:text-sm text-left">
-              <li>Formação Engenharia de Dados: Big Data</li>
-              <li>Curso de Inglês, Paulo Andrade</li>
+              <li>Engenharia de Dados | Udemy</li>
+              <li>Inglês | Udemy</li>
             </ul>
           </div>
         </div>

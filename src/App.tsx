@@ -415,7 +415,7 @@ export default function App() {
 
             <div
               ref={scrollContainerProjects}
-              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-start justify-center"
+              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-center"
               style={{ margin: '0 auto' }}
             >
               {currentProjects.map(({ id, title, description, image, repoLink, viewProject }) => (
@@ -483,7 +483,7 @@ export default function App() {
 
             <div
               ref={scrollContainer}
-              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-start justify-center"
+              className="overflow-x-auto scroll-smooth py-4 scrollbar-hide flex gap-4 justify-center"
               style={{ margin: '0 auto' }}
             >
               {currentTechnologies.map(({ title, image, description, rating }) => (

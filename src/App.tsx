@@ -258,9 +258,9 @@ export default function App() {
               Victor Mello | Desenvolvedor Full Stack
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-2">
-              Olá! Eu sou o Victor, apaixonado por
+              Olá! Eu sou o Victor,
               <br />
-              <span className="block text-[#1387f1]">tecnologia, bike e contato com a natureza.</span>
+              <span className="block text-[#1387f1]">seja bem vindo!</span>
             </h1>
 
             {/* Imagem SÓ no MOBILE */}
@@ -273,7 +273,11 @@ export default function App() {
             </div>
 
             <p className="text-[#dbd6d3] max-w-xl mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
-              Tenho experiência com Python, Flask, Selenium e Inteligência Artificial, tendo desenvolvido do zero a plataforma Prática Sênior, que automatiza a geração e venda de eBooks personalizados. Atuo como desenvolvedor full stack e estou curso uma Pós Graduação área de Engenharia de Dados, com foco em transformar dados em decisões inteligentes e estratégicas. Minha formação inclui graduação em Análise e Desenvolvimento de Sistemas e Pós-Graduação em Gestão de Dados - Big Data. Além disso, sou Oficial R2, trazendo disciplina e determinação para todos os meus projetos. Aos fins de semana, costumo jogar no computador, sair para pedalar por distâncias mais longas e, às vezes, curtir uma praia ou cachoeira com amigos.
+              Aqui você vai encontrar projetos que unem tecnologia e propósito.
+              Tenho experiência com Python, Flask, Selenium, TypeScript e Inteligência Artificial, tendo desenvolvido do zero uma plataforma de e-commerce que automatiza a geração e venda de eBooks personalizados.
+              Graduado em Análise e Desenvolvimento de Sistemas, atuo como desenvolvedor full stack e atualmente curso uma Pós-Graduação em Engenharia de Dados, com foco em transformar dados em decisões inteligentes e estratégicas.
+              Além da tecnologia, trago comigo a disciplina e a determinação de quem assumiu funções de liderança estratégica e execução tática em um dos ambientes mais exigentes do país: o Exército Brasileiro, onde atuei como Oficial R2.
+              Nas horas vagas, costumo jogar no computador, pedalar, correr e, às vezes, curtir uma praia ou cachoeira com amigos.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-4">
               <a
@@ -369,17 +373,9 @@ export default function App() {
               <div>
                 <h3 className="text-lg sm:text-xl font-bold text-[#1387f1]">Pós-Grad</h3>
                 <div className="uppercase text-xs sm:text-sm text-[#dbd6d3]">
-                  Gestão de Dados - BigData,
-                  <br />
-                  Estácio
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-[#1387f1]">Pós-Grad</h3>
-                <div className="uppercase text-xs sm:text-sm text-[#dbd6d3]">
                   Engenharia de Dados,
                   <br />
-                  Anhanguera
+                  Anhanguera (Cursando)
                 </div>
               </div>
               <div>
@@ -713,22 +709,18 @@ export default function App() {
               ✕
             </button>
 
-            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-[#4da5d2]">
-              Concluídos
-            </h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-[#4da5d2]"></h3>
             <ul className="list-disc list-inside space-y-2 text-[#dbd6d3] text-xs sm:text-sm text-left">
               <li>Cloud Foundations | AWS Academy</li>
-              <li>Análise e Estrutura de Dados com Python | Anhanguera</li>
+              <li>Python - Análise e Estrutura de Dados | Anhanguera</li>
               <li>Data Warehouse ELT com Python, SQL e DBT-CORE | Jornada de Dados</li>
               <li>Pipeline ETL com Python | Jornada de Dados</li>
-            </ul>
-
-            <h3 className="text-lg sm:text-xl font-bold mb-3 mt-6 sm:mt-8 text-[#4da5d2]">
-              Em Andamento
-            </h3>
-            <ul className="list-disc list-inside space-y-2 text-[#dbd6d3] text-xs sm:text-sm text-left">
+              <li>Banco de Dados e SQL | Udemy</li>
               <li>Engenharia de Dados | Udemy</li>
               <li>Inglês | Udemy</li>
+              <li>Power BI - Análise e Modelagem de Dados | Fundação Bradesco</li>
+              <li>Microsoft Excel | Fundação Bradesco</li>
+              <br></br>
             </ul>
           </div>
         </div>

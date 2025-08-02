@@ -77,6 +77,7 @@ export default function App() {
   const scrollContainerProjects = useRef<HTMLDivElement | null>(null);
 
   const projects = [
+    { id:"Niteroi Vazamentos", title: "Niterói Vazamentos", description: "Sistema de denúncias de vazamentos de água criado com o objetivo de beneficiar a comunidade local, com mapa e estatísticas.", image: "images/niteroi_vazamentos.png", repoLink: "https://github.com/vmellozk/sistema-vazamento-niteroi", viewProject: "https://github.com/vmellozk/sistema-vazamento-niteroi" },
     { id: "Sistema Financeiro", title: "Sistema Financeiro", description: "CRUD completo focado na organização de ativos, alocação de investimentos e no controle de clientes", image: "images/sistema_financeiro.png", repoLink: "https://github.com/vmellozk/crud-sistema-financeiro-node", viewProject: "https://github.com/vmellozk/crud-sistema-financeiro-node" },
     { id: "Downloader de Mídia", title: "Downloader Mídia", description: "Aplicativo para baixar vídeos e áudios de plataformas online com suporte a múltiplos formatos.", image: "images/downloader_midia_of.png", repoLink: "https://github.com/vmellozk/downloader-midia", viewProject: "https://youtu.be/5T__ed89DhM" },
     { id: "ChatBot WhatsApp com IA", title: "ChatBot WhatsApp com IA", description: "Automação de atendimento via WhatsApp com IA, integrando n8n, Google Sheets e Google Calendar.", image: "images/chatbot-n8n.jpg", repoLink: "https://github.com/vmellozk/n8n-atendimento-bot", viewProject: "https://github.com/vmellozk/n8n-atendimento-bot" },

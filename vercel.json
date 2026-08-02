@@ -15,7 +15,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self' https://fonts.gstatic.com data:; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: https://cdn-icons-png.flaticon.com; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; upgrade-insecure-requests"
+          "value": "default-src 'self'; base-uri 'self'; connect-src 'self' https://formsubmit.co; font-src 'self' https://fonts.gstatic.com data:; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; img-src 'self' data: https://cdn-icons-png.flaticon.com; media-src 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; upgrade-insecure-requests"
         },
         {
           "key": "Cross-Origin-Opener-Policy",

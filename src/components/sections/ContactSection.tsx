@@ -1,6 +1,10 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useRef, useState, type FormEvent } from "react";
+import {
+  CONTACT_FORM_ACTION,
+  sendContactMessage,
+} from "../../services/contactForm";
 
 type ContactFormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -18,6 +22,10 @@ export function ContactSection() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const readField = (fieldName: string) => {
+      const value = formData.get(fieldName);
+      return typeof value === "string" ? value : "";
+    };
 
     try {
       const lastSentAt = Number(sessionStorage.getItem(CONTACT_FORM_LAST_SENT_KEY));
@@ -34,38 +42,21 @@ export function ContactSection() {
     setFormMessage("Enviando mensagem...");
 
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 10_000);
+    const timeout = window.setTimeout(() => controller.abort(), 20_000);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.get("name"),
-          email: formData.get("email"),
-          subject: formData.get("subject"),
-          message: formData.get("message"),
-          website: formData.get("website"),
+      const successMessage = await sendContactMessage(
+        {
+          name: readField("name"),
+          email: readField("email"),
+          subject: readField("subject"),
+          message: readField("message"),
+          honeypot: readField("_honey"),
           startedAt: formStartedAt.current,
-        }),
-        credentials: "same-origin",
-        signal: controller.signal,
-      });
-
-      const result = (await response.json().catch(() => null)) as
-        | { ok?: boolean; message?: string }
-        | null;
-
-      if (!response.ok || result?.ok !== true) {
-        throw new Error(
-          response.status === 429
-            ? "Muitas tentativas. Aguarde alguns minutos e tente novamente."
-            : result?.message || "Não foi possível enviar a mensagem."
-        );
-      }
+          pageUrl: window.location.href,
+        },
+        controller.signal
+      );
 
       form.reset();
       formStartedAt.current = Date.now();
@@ -75,7 +66,7 @@ export function ContactSection() {
         // O envio continua funcionando quando o navegador bloqueia o armazenamento local.
       }
       setFormStatus("success");
-      setFormMessage(result?.message || "Mensagem enviada com sucesso!");
+      setFormMessage(successMessage);
     } catch (error) {
       setFormStatus("error");
       setFormMessage(
@@ -129,23 +120,25 @@ export function ContactSection() {
           </div>
         </div>
 
-        {/* Esta rota valida a mensagem no servidor e depois a encaminha ao FormSubmit. */}
+        {/* O JavaScript usa primeiro a rota protegida; a action mantém o fallback nativo do FormSubmit. */}
         <form
-          action="/api/contact"
+          action={CONTACT_FORM_ACTION}
           method="POST"
           onSubmit={handleSubmit}
           className="flex flex-col gap-4 max-w-md mx-auto md:mx-0 min-w-[18rem]"
         >
           <div className="contact-honeypot" aria-hidden="true">
-            <label htmlFor="contact-website">Não preencha este campo</label>
+            <label htmlFor="contact-honey">Não preencha este campo</label>
             <input
-              id="contact-website"
+              id="contact-honey"
               type="text"
-              name="website"
+              name="_honey"
               tabIndex={-1}
               autoComplete="off"
             />
           </div>
+          <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio" />
+          <input type="hidden" name="_template" value="table" />
           <input
             type="text"
             placeholder="Nome"

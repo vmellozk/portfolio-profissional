@@ -2,7 +2,7 @@
 
 ## Formulário de contato
 
-O navegador envia mensagens somente para `POST /api/contact`. Depois das validações, a função encaminha a mensagem para o endpoint AJAX oficial do FormSubmit. Manter o endereço do FormSubmit no servidor impede que o formulário público contorne as proteções abaixo:
+O navegador envia mensagens primeiro para `POST /api/contact`. Depois das validações, a função encaminha a mensagem para o endpoint AJAX oficial do FormSubmit. Se o serviço externo responder com erro de gateway (`502`) dentro da Vercel, o cliente faz um único fallback para o endpoint AJAX oficial. Esse fallback só acontece depois que a mesma tentativa já passou pela validação e pelo rate limit da função; respostas `4xx` nunca acionam o envio alternativo.
 
 - limite local de 5 requisições a cada 10 minutos por IP em cada instância da função;
 - limite de 8 KB para o corpo da requisição;
@@ -11,6 +11,8 @@ O navegador envia mensagens somente para `POST /api/contact`. Depois das valida�
 - verificação da origem da requisição;
 - timeout no provedor de e-mail e respostas sem detalhes internos;
 - bloqueio de métodos e tipos de conteúdo não permitidos.
+
+O formulário também mantém o honeypot `_honey` reconhecido pelo FormSubmit, restrições de tamanho nos campos e cooldown local. A política CSP libera exclusivamente `https://formsubmit.co` para conexão e fallback nativo do formulário.
 
 O cliente também impede envios simultâneos e aplica um intervalo local de 30 segundos. Essa camada melhora a experiência, mas a proteção efetiva permanece no servidor.
 

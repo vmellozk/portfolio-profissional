@@ -1,2 +1,9 @@
 node_modules
 venv/
+dist/
+.netlify/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example

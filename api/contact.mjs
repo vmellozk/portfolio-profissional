@@ -5,7 +5,9 @@ const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1_000;
 const RATE_LIMIT_MAX_REQUESTS = 5;
 const RATE_LIMIT_MAX_CLIENTS = 1_000;
 
-const DEFAULT_FORM_ENDPOINT =
+// Endpoint oficial do FormSubmit. Ele fica no servidor para que o navegador
+// não consiga ignorar as validações e os limites aplicados nesta função.
+const FORM_SUBMIT_AJAX_ENDPOINT =
   "https://formsubmit.co/ajax/contato.devictormello@gmail.com";
 
 const ALLOWED_FIELDS = new Set([
@@ -215,8 +217,30 @@ function validateSubmission(data) {
   return { isBot: false, name, email, subject, message };
 }
 
-async function forwardSubmission(submission) {
-  const endpoint = process.env.CONTACT_FORM_ENDPOINT?.trim() || DEFAULT_FORM_ENDPOINT;
+function getSubmissionSourceUrl(request) {
+  const requestOrigin = new URL(request.url).origin;
+  const referer = request.headers.get("referer");
+
+  if (!referer) return requestOrigin;
+
+  try {
+    const refererUrl = new URL(referer);
+    if (
+      refererUrl.origin === requestOrigin ||
+      getAllowedOrigins().includes(refererUrl.origin)
+    ) {
+      return refererUrl.href.slice(0, 2_048);
+    }
+  } catch {
+    // Usa a origem validada da própria requisição quando o Referer é inválido.
+  }
+
+  return requestOrigin;
+}
+
+async function forwardSubmission(submission, sourceUrl) {
+  const endpoint =
+    process.env.CONTACT_FORM_ENDPOINT?.trim() || FORM_SUBMIT_AJAX_ENDPOINT;
   const endpointUrl = new URL(endpoint);
 
   if (endpointUrl.protocol !== "https:" || endpointUrl.hostname !== "formsubmit.co") {
@@ -238,9 +262,11 @@ async function forwardSubmission(submission) {
         email: submission.email,
         subject: submission.subject,
         message: submission.message,
+        _replyto: submission.email,
         _subject: `[Portfólio] ${submission.subject}`,
         _template: "table",
         _captcha: "false",
+        _url: sourceUrl,
       }),
       signal: controller.signal,
     });
@@ -274,7 +300,7 @@ export async function handleContact(request) {
       return jsonResponse(200, { ok: true, message: "Mensagem enviada." });
     }
 
-    await forwardSubmission(submission);
+    await forwardSubmission(submission, getSubmissionSourceUrl(request));
     return jsonResponse(200, { ok: true, message: "Mensagem enviada com sucesso." });
   } catch (error) {
     if (error instanceof HttpError) {

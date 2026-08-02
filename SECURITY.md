@@ -2,7 +2,7 @@
 
 ## Formulário de contato
 
-O navegador envia mensagens somente para `POST /api/contact`. A função de servidor aplica:
+O navegador envia mensagens somente para `POST /api/contact`. Depois das validações, a função encaminha a mensagem para o endpoint AJAX oficial do FormSubmit. Manter o endereço do FormSubmit no servidor impede que o formulário público contorne as proteções abaixo:
 
 - limite local de 5 requisições a cada 10 minutos por IP em cada instância da função;
 - limite de 8 KB para o corpo da requisição;

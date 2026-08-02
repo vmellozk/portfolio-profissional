@@ -129,6 +129,7 @@ export function ContactSection() {
           </div>
         </div>
 
+        {/* Esta rota valida a mensagem no servidor e depois a encaminha ao FormSubmit. */}
         <form
           action="/api/contact"
           method="POST"
